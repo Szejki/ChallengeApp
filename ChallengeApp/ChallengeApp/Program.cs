@@ -1,47 +1,70 @@
-﻿string name = "Łukasz";
-bool sex = true; //true - mężczyzna, false - kobieta
-int age = 35;
+﻿int number = 4566;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+
+int counter0 = 0;
+int counter1 = 0;
+int counter2 = 0;
+int counter3 = 0;
+int counter4 = 0;
+int counter5 = 0;
+int counter6 = 0;
+int counter7 = 0;
+int counter8 = 0;
+int counter9 = 0;
 
 
-if (sex == true) //mężczyzna
+foreach (char letter in letters)
 {
-    if (age == 0 && name == "Admin")
+    if (letter == '0')
     {
-        Console.WriteLine("Witam Admnistratora !");
+        counter0++;
     }
-    else if (age < 18)
+    else if (letter == '1')
     {
-        Console.WriteLine("Niepełnoletni Mężczyzna");
+        counter1++;
     }
-    else if (age >= 18 && age < 60)
+    else if (letter == '2')
     {
-        Console.WriteLine("Mężczyzna " + name + ", lat " + age);
+        counter2++;
     }
-    else if (age >= 60)
+    else if (letter == '3')
     {
-        Console.WriteLine("Mężczyzna w podeszłym wieku");
+        counter3++;
+    }
+    else if (letter == '4')
+    {
+        counter4++;
+    }
+    else if (letter == '5')
+    {
+        counter5++;
+    }
+    else if (letter == '6')
+    {
+        counter6++;
+    }
+    else if (letter == '7')
+    {
+        counter7++;
+    }
+    else if (letter == '8')
+    {
+        counter8++;
+    }
+    else if (letter == '9')
+    {
+        counter9++;
     }
 }
-else if (sex == false) //kobieta
-{
-    if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletnia Kobieta");
-    }
-    else if (name == "Ewa" && age == 33)
-    {
-        Console.WriteLine("Ewa, lat 33");
-    }
-    else if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30 Lat");
-    }
-    else if (age >= 30 && age < 60)
-    {
-        Console.WriteLine("Kobieta " + name + ", lat " + age);
-    }
-    else if (age >= 60)
-    {
-        Console.WriteLine("Kobieta w podeszłym wieku");
-    }
-}
+Console.WriteLine("Ilość cyfr w liczbie: 4566");
+Console.WriteLine("0 => " + counter0);
+Console.WriteLine("1 => " + counter1);
+Console.WriteLine("2 => " + counter2);
+Console.WriteLine("3 => " + counter3);
+Console.WriteLine("4 => " + counter4);
+Console.WriteLine("5 => " + counter5);
+Console.WriteLine("6 => " + counter6);
+Console.WriteLine("7 => " + counter7);
+Console.WriteLine("8 => " + counter8);
+Console.WriteLine("9 => " + counter9);
