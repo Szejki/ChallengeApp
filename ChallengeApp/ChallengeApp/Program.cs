@@ -1,48 +1,32 @@
 ﻿using ChallengeApp;
 
-Employee employee1 = new Employee("Jan", "Nowak", 18);
-Employee employee2 = new Employee("Milena", "Milewska", 50);
-Employee employee3 = new Employee("Piotr", "Piotrowski", 90);
 
+Employee em1 = new Employee("Adam", "Adamczyk", 20);
+Employee em2 = new Employee("Beata", "Budna", 30);
+Employee em3 = new Employee("Cyprian", "Cybulski", 40);
 
-employee1.AddScore(3);
-employee1.AddScore(2);
-employee1.AddScore(3);
-employee1.AddScore(2);
-employee1.AddScore(0);
+em1.AddScore(3); em2.AddScore(3); em3.AddScore(1);
+em1.AddScore(2); em2.AddScore(7); em3.AddScore(-2);
+em1.AddScore(3); em2.AddScore(-10); em3.AddScore(6);
+em1.AddScore(2); em2.AddScore(1); em3.AddScore(2);
+em1.AddScore(0); em2.AddScore(9); em3.AddScore(4);
 
-employee2.AddScore(3);
-employee2.AddScore(0);
-employee2.AddScore(7);
-employee2.AddScore(1);
-employee2.AddScore(9);
-
-employee3.AddScore(1);
-employee3.AddScore(1);
-employee3.AddScore(6);
-employee3.AddScore(2);
-employee3.AddScore(2);
-
-List<Employee> employees = new List<Employee>()
-{
-    employee1, employee2, employee3
-};
+List<Employee> emS = new List<Employee>()
+    {em1, em2, em3};
 
 int maxResult = -1;
-Employee employeeWithMaxResult = null;
+Employee emWithMaxResult = null;
 
-
-foreach (var employee in employees)
+foreach(var em in emS)
 {
-    if (employee.Result > maxResult)
+    if(em.Result> maxResult)
     {
-        maxResult = employee.Result;
-        employeeWithMaxResult = employee;
+        maxResult = em.Result;
+        emWithMaxResult = em;
     }
 }
-
 Console.WriteLine("The Winner is:");
-Console.WriteLine("Name: " + employeeWithMaxResult.Name);
-Console.WriteLine("Surname: " + employeeWithMaxResult.Surname);
-Console.WriteLine("Age: " + employeeWithMaxResult.Age);
-Console.WriteLine("He have: " + employeeWithMaxResult.Result + " points");
+Console.WriteLine("Name: " + emWithMaxResult.Name);
+Console.WriteLine("Surname: " +emWithMaxResult.Surname);
+Console.WriteLine("Age: " + emWithMaxResult.Age);
+Console.WriteLine("You have: " + emWithMaxResult.Result + " points");
