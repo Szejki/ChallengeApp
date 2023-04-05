@@ -17,9 +17,9 @@ List<Employee> emS = new List<Employee>()
 int maxResult = -1;
 Employee emWithMaxResult = null;
 
-foreach(var em in emS)
+foreach (var em in emS)
 {
-    if(em.Result> maxResult)
+    if (em.Result > maxResult)
     {
         maxResult = em.Result;
         emWithMaxResult = em;
@@ -27,6 +27,6 @@ foreach(var em in emS)
 }
 Console.WriteLine("The Winner is:");
 Console.WriteLine("Name: " + emWithMaxResult.Name);
-Console.WriteLine("Surname: " +emWithMaxResult.Surname);
+Console.WriteLine("Surname: " + emWithMaxResult.Surname);
 Console.WriteLine("Age: " + emWithMaxResult.Age);
 Console.WriteLine("You have: " + emWithMaxResult.Result + " points");
